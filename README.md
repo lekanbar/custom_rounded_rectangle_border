@@ -8,7 +8,8 @@ borderRadius and border at the same time, see open issue below:
 [Support non-uniform Borders with a non-zero borderRadius](https://github.com/flutter/flutter/issues/12583)
 
 ## Sample Usage
-`Container(
+```
+Container(
     decoration: ShapeDecoration(
     shape: CustomRoundedRectangleBorder(
       borderRadius: BorderRadius.only(
@@ -25,7 +26,8 @@ borderRadius and border at the same time, see open issue below:
       bottomSide: BorderSide(
           color: Colors.black),
     ),
-),)`
+),)
+```
 
 ## Flutter
 For help getting started with Flutter, view our 
