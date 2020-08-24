@@ -1,7 +1,6 @@
 name: custom_rounded_rectangle_border
 description: A simple package for drawing custom shape borders with full control on how you want the sides to be rendered.
 version: 0.0.1
-author: Lekan Baruwa/Bram Vanbilsen
 homepage: https://github.com/lekanbar/custom_rounded_rectangle_border
 
 environment:
