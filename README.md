@@ -1,4 +1,4 @@
-# custom_rounded_rectangle_border
+# Custom rounded rectangle border
 
 A simple package for drawing custom shape borders with full control on how you want the sides to be
 rendered.
