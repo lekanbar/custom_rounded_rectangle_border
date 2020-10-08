@@ -3,7 +3,7 @@
 A simple package for drawing custom shape borders with full control on how you want the sides to be
 rendered.
 
-It simply addresses the an open Flutter issue where an error is thrown when you try to set a
+It simply addresses an open Flutter issue where an error is thrown when you try to set a
 borderRadius and border at the same time, see open issue below:
 [Support non-uniform Borders with a non-zero borderRadius](https://github.com/flutter/flutter/issues/12583)
 
