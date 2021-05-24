@@ -36,21 +36,21 @@ class CustomRoundedRectangleBorder extends ShapeBorder {
 
 
   /// The style for the left side border.
-  final BorderSide leftSide;
+  final BorderSide? leftSide;
   /// The style for the right side border.
-  final BorderSide rightSide;
+  final BorderSide? rightSide;
   /// The style for the top side border.
-  final BorderSide topSide;
+  final BorderSide? topSide;
   /// The style for the bottom side border.
-  final BorderSide bottomSide;
+  final BorderSide? bottomSide;
   /// The style for the top left corner side border.
-  final BorderSide topLeftCornerSide;
+  final BorderSide? topLeftCornerSide;
   /// The style for the top right corner side border.
-  final BorderSide topRightCornerSide;
+  final BorderSide? topRightCornerSide;
   /// The style for the bottom left corner side border.
-  final BorderSide bottomLeftCornerSide;
+  final BorderSide? bottomLeftCornerSide;
   /// The style for the bottom right corner side border.
-  final BorderSide bottomRightCornerSide;
+  final BorderSide? bottomRightCornerSide;
 
   double get biggestWidth => max(
       max(
@@ -89,58 +89,58 @@ class CustomRoundedRectangleBorder extends ShapeBorder {
   }
 
   @override
-  ShapeBorder lerpFrom(ShapeBorder a, double t) {
+  ShapeBorder? lerpFrom(ShapeBorder? a, double t) {
     assert(t != null);
     if (a is CustomRoundedRectangleBorder) {
       return new CustomRoundedRectangleBorder(
-        topSide: topSide == null ? null : BorderSide.lerp(a.topSide, topSide, t),
-        leftSide: leftSide == null ? null : BorderSide.lerp(a.leftSide, leftSide, t),
-        bottomSide: bottomSide == null ? null : BorderSide.lerp(a.bottomSide, bottomSide, t),
-        rightSide: rightSide == null ? null : BorderSide.lerp(a.rightSide, rightSide, t),
-        topLeftCornerSide: topLeftCornerSide == null ? null : BorderSide.lerp(a.topLeftCornerSide, topLeftCornerSide, t),
-        topRightCornerSide: topRightCornerSide == null ? null : BorderSide.lerp(a.topRightCornerSide, topRightCornerSide, t),
-        bottomLeftCornerSide: bottomLeftCornerSide == null ? null : BorderSide.lerp(a.bottomLeftCornerSide, bottomLeftCornerSide, t),
-        bottomRightCornerSide: bottomRightCornerSide == null ? null : BorderSide.lerp(a.bottomRightCornerSide, bottomRightCornerSide, t),
-        borderRadius: BorderRadius.lerp(a.borderRadius, borderRadius, t),
+        topSide: topSide == null ? null : BorderSide.lerp(a.topSide!, topSide!, t),
+        leftSide: leftSide == null ? null : BorderSide.lerp(a.leftSide!, leftSide!, t),
+        bottomSide: bottomSide == null ? null : BorderSide.lerp(a.bottomSide!, bottomSide!, t),
+        rightSide: rightSide == null ? null : BorderSide.lerp(a.rightSide!, rightSide!, t),
+        topLeftCornerSide: topLeftCornerSide == null ? null : BorderSide.lerp(a.topLeftCornerSide!, topLeftCornerSide!, t),
+        topRightCornerSide: topRightCornerSide == null ? null : BorderSide.lerp(a.topRightCornerSide!, topRightCornerSide!, t),
+        bottomLeftCornerSide: bottomLeftCornerSide == null ? null : BorderSide.lerp(a.bottomLeftCornerSide!, bottomLeftCornerSide!, t),
+        bottomRightCornerSide: bottomRightCornerSide == null ? null : BorderSide.lerp(a.bottomRightCornerSide!, bottomRightCornerSide!, t),
+        borderRadius: BorderRadius.lerp(a.borderRadius, borderRadius, t)!,
       );
     }
     return super.lerpFrom(a, t);
   }
 
   @override
-  ShapeBorder lerpTo(ShapeBorder b, double t) {
+  ShapeBorder? lerpTo(ShapeBorder? b, double t) {
     assert(t != null);
     if (b is CustomRoundedRectangleBorder) {
       return new CustomRoundedRectangleBorder(
-        topSide: topSide == null ? null : BorderSide.lerp(topSide, b.topSide, t),
-        leftSide: leftSide == null ? null : BorderSide.lerp(leftSide, b.leftSide, t),
-        bottomSide: bottomSide == null ? null : BorderSide.lerp(bottomSide, b.bottomSide, t),
-        rightSide: rightSide == null ? null : BorderSide.lerp(rightSide, b.rightSide, t),
-        topLeftCornerSide: topLeftCornerSide == null ? null : BorderSide.lerp(topLeftCornerSide, b.topLeftCornerSide, t),
-        topRightCornerSide: topRightCornerSide == null ? null : BorderSide.lerp(topRightCornerSide, b.topRightCornerSide, t),
-        bottomLeftCornerSide: bottomLeftCornerSide == null ? null : BorderSide.lerp(bottomLeftCornerSide, b.bottomLeftCornerSide, t),
-        bottomRightCornerSide: bottomRightCornerSide == null ? null : BorderSide.lerp(bottomRightCornerSide, b.bottomRightCornerSide, t),
-        borderRadius: BorderRadius.lerp(borderRadius, b.borderRadius, t),
+        topSide: topSide == null ? null : BorderSide.lerp(topSide!, b.topSide!, t),
+        leftSide: leftSide == null ? null : BorderSide.lerp(leftSide!, b.leftSide!, t),
+        bottomSide: bottomSide == null ? null : BorderSide.lerp(bottomSide!, b.bottomSide!, t),
+        rightSide: rightSide == null ? null : BorderSide.lerp(rightSide!, b.rightSide!, t),
+        topLeftCornerSide: topLeftCornerSide == null ? null : BorderSide.lerp(topLeftCornerSide!, b.topLeftCornerSide!, t),
+        topRightCornerSide: topRightCornerSide == null ? null : BorderSide.lerp(topRightCornerSide!, b.topRightCornerSide!, t),
+        bottomLeftCornerSide: bottomLeftCornerSide == null ? null : BorderSide.lerp(bottomLeftCornerSide!, b.bottomLeftCornerSide!, t),
+        bottomRightCornerSide: bottomRightCornerSide == null ? null : BorderSide.lerp(bottomRightCornerSide!, b.bottomRightCornerSide!, t),
+        borderRadius: BorderRadius.lerp(borderRadius, b.borderRadius, t)!,
       );
     }
     return super.lerpTo(b, t);
   }
 
   @override
-  Path getInnerPath(Rect rect, {TextDirection textDirection}) {
+  Path getInnerPath(Rect rect, {TextDirection? textDirection}) {
     return new Path()
       ..addRRect(borderRadius.resolve(textDirection).toRRect(rect).deflate(biggestWidth));
   }
 
   @override
-  Path getOuterPath(Rect rect, {TextDirection textDirection}) {
+  Path getOuterPath(Rect rect, {TextDirection? textDirection}) {
     return new Path()
       ..addRRect(borderRadius.resolve(textDirection).toRRect(rect));
   }
 
   @override
-  void paint(Canvas canvas, Rect rect, {TextDirection textDirection}) {
-    Paint paint;
+  void paint(Canvas canvas, Rect rect, {TextDirection? textDirection}) {
+    Paint? paint;
 
     paint = createPaintForBorder(topLeftCornerSide);
     if (borderRadius.topLeft.x != 0.0 && paint != null) {
@@ -242,7 +242,7 @@ class CustomRoundedRectangleBorder extends ShapeBorder {
   }
 
   Rect rectForCorner(
-      double sideWidth, Offset offset, Radius radius, num signX, num signY) {
+      double? sideWidth, Offset offset, Radius radius, num signX, num signY) {
     if (sideWidth == null)
       sideWidth = 0.0;
     double d = sideWidth / 2;
@@ -258,7 +258,7 @@ class CustomRoundedRectangleBorder extends ShapeBorder {
     return rect;
   }
 
-  Paint createPaintForBorder(BorderSide side) {
+  Paint? createPaintForBorder(BorderSide? side) {
     if (side == null)
       return null;
 
