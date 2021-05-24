@@ -1,4 +1,4 @@
-## [1.0.0] - 05/24/2021
+## [0.2.0-nullsafety.0] - 05/24/2021
 
 * This release was created from the null-safety upgrade/modification made by @hwied.
 
