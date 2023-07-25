@@ -1,3 +1,5 @@
+library custom_rounded_rectangle_border;
+
 import 'dart:math';
 
 import 'package:flutter/painting.dart';
